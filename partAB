@@ -1,0 +1,20 @@
+""" GRAPHS PART A"""
+#HASHTABLES - REQUIREMENT 1
+import matplotlib.pyplot as plt
+
+# Given data points for 'n' and the corresponding times
+n_values = [10, 25, 50, 75, 100, 200, 450]
+times = [0.00001 for _ in n_values]  # constant time as per the given data
+
+# Plotting the time complexity graph
+plt.figure(figsize=(10, 6))
+plt.plot(n_values, times, marker='o', linestyle='-', color='b')
+
+# Title and labels
+plt.title('Time Complexity T(n) for Finding a Post by Its Unique Datetime Value')
+plt.xlabel('Number of Posts (n)')
+plt.ylabel('Time Taken (seconds)')
+plt.grid(True)
+
+# Show plot
+plt.show()
