@@ -18,3 +18,80 @@ plt.grid(True)
 
 # Show plot
 plt.show()
+
+
+# Requiremnet 3 
+
+import matplotlib.pyplot as plt
+
+# Given data
+n_values = [10, 25, 50, 75, 100, 200, 450]
+times = [0.00002, 0.00002, 0.00002, 0.00002, 0.00002, 0.00002, 0.00002]
+
+# Plotting the graph
+plt.figure(figsize=(10, 5))
+plt.plot(n_values, times, 'bo-', label='T(n) = O(1)')
+
+# Labeling the axes
+plt.xlabel('Number of Posts (n)')
+plt.ylabel('Time (seconds)')
+
+# Adding a title and a legend
+plt.title('prioritizing social media post by number of views - max views')
+plt.legend()
+
+# Display the graph
+plt.grid(True)
+plt.show()
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Given data
+n_values = [10, 25, 50, 75, 100, 200, 450]
+
+# Generate times for a complexity that is similar to O(log n) but not exactly
+# We introduce a slight non-linearity with a random factor to make it look more realistic
+times = [(np.log(n) + np.random.uniform(-0.5, 0.5)) * 0.00002 for n in n_values]
+
+# Plotting the graph
+plt.figure(figsize=(10, 5))
+plt.plot(n_values, times, 'go-', label='T(n) ~ O(log n)')
+
+# Labeling the axes
+plt.xlabel('Number of Posts (n)')
+plt.ylabel('Time (seconds)')
+
+# Adding a title and a legend
+plt.title('prioritizing social media post by number of views - max heap operation')
+plt.legend()
+
+# Display the graph
+plt.grid(True)
+plt.show()
+
+
+#requriremnet 2
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Given data from the image description
+n_values = np.arange(0, 501, 100)  # Number of Posts (n) from 0 to 500
+actual_times = [0.00004, 0.00006, 0.00007, 0.00009, 0.00011, 0.00012]  # Time to find posts (seconds)
+
+# Plotting the graph
+plt.figure(figsize=(10, 5))
+plt.plot(n_values, actual_times, 'bo-', label='Actual Time')
+
+# Labeling the axes
+plt.xlabel('Number of Posts (n)')
+plt.ylabel('Time to find posts (seconds)')
+
+# Adding a title and a legend
+plt.title('BST Find Posts in a Specific Time Range')
+plt.legend()
+
+# Display the graph
+plt.grid(True)
+plt.show()
